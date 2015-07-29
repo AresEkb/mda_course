@@ -1,0 +1,7 @@
+# Tracing options for the pm.diagram plug-in
+
+# Common issues
+pm.diagram/debug=false
+
+# Visual IDs
+pm.diagram/debug/visualID=false

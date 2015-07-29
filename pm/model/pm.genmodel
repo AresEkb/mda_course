@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/pm/src" modelPluginID="pm" modelName="Pm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true">
+  <foreignModel>pm.ecore</foreignModel>
+  <genPackages prefix="Pm" disposableProviderFactory="true" ecorePackage="pm.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="pm.ecore#//Qualification">
+      <genEnumLiterals ecoreEnumLiteral="pm.ecore#//Qualification/novice"/>
+      <genEnumLiterals ecoreEnumLiteral="pm.ecore#//Qualification/programmer"/>
+      <genEnumLiterals ecoreEnumLiteral="pm.ecore#//Qualification/lead"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="pm.ecore#//Priority">
+      <genEnumLiterals ecoreEnumLiteral="pm.ecore#//Priority/low"/>
+      <genEnumLiterals ecoreEnumLiteral="pm.ecore#//Priority/medium"/>
+      <genEnumLiterals ecoreEnumLiteral="pm.ecore#//Priority/high"/>
+    </genEnums>
+    <genClasses ecoreClass="pm.ecore#//Employee">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pm.ecore#//Employee/fullName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pm.ecore#//Employee/birthDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pm.ecore#//Employee/qualification"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pm.ecore#//Employee/participantProjects"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pm.ecore#//Employee/managerProjects"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pm.ecore#//Employee/tasks"/>
+    </genClasses>
+    <genClasses ecoreClass="pm.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pm.ecore#//Task/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pm.ecore#//Task/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pm.ecore#//Task/planTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pm.ecore#//Task/factTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pm.ecore#//Task/priority"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pm.ecore#//Task/project"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pm.ecore#//Task/executor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pm.ecore#//Task/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pm.ecore#//Task/children"/>
+    </genClasses>
+    <genClasses ecoreClass="pm.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pm.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pm.ecore#//Project/closed"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pm.ecore#//Project/participants"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pm.ecore#//Project/manager"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pm.ecore#//Project/tasks"/>
+    </genClasses>
+    <genClasses ecoreClass="pm.ecore#//DocumentRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pm.ecore#//DocumentRoot/projects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pm.ecore#//DocumentRoot/employees"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pm.ecore#//DocumentRoot/tasks"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
