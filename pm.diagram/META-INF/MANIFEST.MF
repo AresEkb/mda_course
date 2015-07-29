@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: pm.diagram.part.PmDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: pm.diagram.edit.parts, 
+Export-Package: pm.diagram.edit.parts,
  pm.diagram.part,
  pm.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,

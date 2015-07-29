@@ -82,7 +82,7 @@ public class PmNewDiagramFileWizard extends Wizard {
 		}
 		myFileCreationPage.setContainerFullPath(filePath);
 		myFileCreationPage.setFileName(PmDiagramEditorUtil.getUniqueFileName(
-				filePath, fileName, "pm_diagram")); //$NON-NLS-1$
+				filePath, fileName, "pmd")); //$NON-NLS-1$
 
 		diagramRootElementSelectionPage = new DiagramRootElementSelectionPage(
 				Messages.PmNewDiagramFileWizard_RootSelectionPageName);

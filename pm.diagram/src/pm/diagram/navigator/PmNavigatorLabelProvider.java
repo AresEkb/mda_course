@@ -92,33 +92,33 @@ public class PmNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (PmVisualIDRegistry.getVisualID(view)) {
-		case ProjectManagerEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://www.example.org/pm?Project?manager", PmElementTypes.ProjectManager_4017); //$NON-NLS-1$
 		case ProjectParticipantsEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.example.org/pm?Project?participants", PmElementTypes.ProjectParticipants_4018); //$NON-NLS-1$
-		case DocumentRootEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Diagram?http://www.example.org/pm?DocumentRoot", PmElementTypes.DocumentRoot_1000); //$NON-NLS-1$
-		case TaskEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://www.example.org/pm?Task", PmElementTypes.Task_2006); //$NON-NLS-1$
-		case EmployeeEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://www.example.org/pm?Employee", PmElementTypes.Employee_2004); //$NON-NLS-1$
-		case TaskExecutorEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://www.example.org/pm?Task?executor", PmElementTypes.TaskExecutor_4019); //$NON-NLS-1$
 		case TaskParentEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.example.org/pm?Task?parent", PmElementTypes.TaskParent_4020); //$NON-NLS-1$
-		case ProjectEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://www.example.org/pm?Project", PmElementTypes.Project_2005); //$NON-NLS-1$
 		case TaskProjectEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://www.example.org/pm?Task?project", PmElementTypes.TaskProject_4021); //$NON-NLS-1$
+		case ProjectEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://www.example.org/pm?Project", PmElementTypes.Project_2005); //$NON-NLS-1$
+		case EmployeeEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://www.example.org/pm?Employee", PmElementTypes.Employee_2004); //$NON-NLS-1$
+		case ProjectManagerEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.example.org/pm?Project?manager", PmElementTypes.ProjectManager_4017); //$NON-NLS-1$
+		case TaskExecutorEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.example.org/pm?Task?executor", PmElementTypes.TaskExecutor_4019); //$NON-NLS-1$
+		case TaskEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://www.example.org/pm?Task", PmElementTypes.Task_2006); //$NON-NLS-1$
+		case DocumentRootEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Diagram?http://www.example.org/pm?DocumentRoot", PmElementTypes.DocumentRoot_1000); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -171,24 +171,24 @@ public class PmNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (PmVisualIDRegistry.getVisualID(view)) {
-		case ProjectManagerEditPart.VISUAL_ID:
-			return getProjectManager_4017Text(view);
 		case ProjectParticipantsEditPart.VISUAL_ID:
 			return getProjectParticipants_4018Text(view);
-		case DocumentRootEditPart.VISUAL_ID:
-			return getDocumentRoot_1000Text(view);
-		case TaskEditPart.VISUAL_ID:
-			return getTask_2006Text(view);
-		case EmployeeEditPart.VISUAL_ID:
-			return getEmployee_2004Text(view);
-		case TaskExecutorEditPart.VISUAL_ID:
-			return getTaskExecutor_4019Text(view);
 		case TaskParentEditPart.VISUAL_ID:
 			return getTaskParent_4020Text(view);
-		case ProjectEditPart.VISUAL_ID:
-			return getProject_2005Text(view);
 		case TaskProjectEditPart.VISUAL_ID:
 			return getTaskProject_4021Text(view);
+		case ProjectEditPart.VISUAL_ID:
+			return getProject_2005Text(view);
+		case EmployeeEditPart.VISUAL_ID:
+			return getEmployee_2004Text(view);
+		case ProjectManagerEditPart.VISUAL_ID:
+			return getProjectManager_4017Text(view);
+		case TaskExecutorEditPart.VISUAL_ID:
+			return getTaskExecutor_4019Text(view);
+		case TaskEditPart.VISUAL_ID:
+			return getTask_2006Text(view);
+		case DocumentRootEditPart.VISUAL_ID:
+			return getDocumentRoot_1000Text(view);
 		}
 		return getUnknownElementText(view);
 	}

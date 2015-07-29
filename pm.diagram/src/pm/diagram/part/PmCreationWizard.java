@@ -102,7 +102,7 @@ public class PmCreationWizard extends Wizard implements INewWizard {
 	 */
 	public void addPages() {
 		diagramModelFilePage = new PmCreationWizardPage(
-				"DiagramModelFile", getSelection(), "pm_diagram"); //$NON-NLS-1$ //$NON-NLS-2$
+				"DiagramModelFile", getSelection(), "pmd"); //$NON-NLS-1$ //$NON-NLS-2$
 		diagramModelFilePage
 				.setTitle(Messages.PmCreationWizard_DiagramModelFilePageTitle);
 		diagramModelFilePage
@@ -115,8 +115,8 @@ public class PmCreationWizard extends Wizard implements INewWizard {
 			public void setVisible(boolean visible) {
 				if (visible) {
 					String fileName = diagramModelFilePage.getFileName();
-					fileName = fileName.substring(0, fileName.length()
-							- ".pm_diagram".length()); //$NON-NLS-1$
+					fileName = fileName.substring(0,
+							fileName.length() - ".pmd".length()); //$NON-NLS-1$
 					setFileName(PmDiagramEditorUtil.getUniqueFileName(
 							getContainerFullPath(), fileName, "pm")); //$NON-NLS-1$
 				}

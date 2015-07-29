@@ -17,7 +17,7 @@ public class PmUriEditorInputTester extends PropertyTester {
 			return false;
 		}
 		URIEditorInput editorInput = (URIEditorInput) receiver;
-		return "pm_diagram".equals(editorInput.getURI().fileExtension()); //$NON-NLS-1$
+		return "pmd".equals(editorInput.getURI().fileExtension()); //$NON-NLS-1$
 	}
 
 }

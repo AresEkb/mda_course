@@ -225,33 +225,6 @@ public class PmNavigatorContentProvider implements ICommonContentProvider {
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (PmVisualIDRegistry.getVisualID(view)) {
 
-		case ProjectManagerEditPart.VISUAL_ID: {
-			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			PmNavigatorGroup target = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_ProjectManager_4017_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			PmNavigatorGroup source = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_ProjectManager_4017_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(EmployeeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(ProjectEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
 		case ProjectParticipantsEditPart.VISUAL_ID: {
 			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
@@ -279,122 +252,18 @@ public class PmNavigatorContentProvider implements ICommonContentProvider {
 			return result.toArray();
 		}
 
-		case DocumentRootEditPart.VISUAL_ID: {
-			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
-			Diagram sv = (Diagram) view;
-			PmNavigatorGroup links = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_DocumentRoot_1000_links,
-					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(EmployeeEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(ProjectEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(TaskEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry
-							.getType(ProjectManagerEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry
-							.getType(ProjectParticipantsEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(TaskExecutorEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(TaskParentEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(TaskProjectEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			if (!links.isEmpty()) {
-				result.add(links);
-			}
-			return result.toArray();
-		}
-
-		case TaskEditPart.VISUAL_ID: {
-			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			PmNavigatorGroup outgoinglinks = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_Task_2006_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			PmNavigatorGroup incominglinks = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_Task_2006_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(TaskExecutorEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(TaskParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(TaskParentEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(TaskProjectEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case EmployeeEditPart.VISUAL_ID: {
-			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			PmNavigatorGroup incominglinks = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_Employee_2004_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry
-							.getType(ProjectManagerEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry
-							.getType(ProjectParticipantsEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(TaskExecutorEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case TaskExecutorEditPart.VISUAL_ID: {
+		case TaskParentEditPart.VISUAL_ID: {
 			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			PmNavigatorGroup target = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_TaskExecutor_4019_target,
+					Messages.NavigatorGroupName_TaskParent_4020_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			PmNavigatorGroup source = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_TaskExecutor_4019_source,
+					Messages.NavigatorGroupName_TaskParent_4020_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(EmployeeEditPart.VISUAL_ID));
+					PmVisualIDRegistry.getType(TaskEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -410,18 +279,18 @@ public class PmNavigatorContentProvider implements ICommonContentProvider {
 			return result.toArray();
 		}
 
-		case TaskParentEditPart.VISUAL_ID: {
+		case TaskProjectEditPart.VISUAL_ID: {
 			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			PmNavigatorGroup target = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_TaskParent_4020_target,
+					Messages.NavigatorGroupName_TaskProject_4021_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			PmNavigatorGroup source = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_TaskParent_4020_source,
+					Messages.NavigatorGroupName_TaskProject_4021_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					PmVisualIDRegistry.getType(TaskEditPart.VISUAL_ID));
+					PmVisualIDRegistry.getType(ProjectEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -470,18 +339,72 @@ public class PmNavigatorContentProvider implements ICommonContentProvider {
 			return result.toArray();
 		}
 
-		case TaskProjectEditPart.VISUAL_ID: {
+		case EmployeeEditPart.VISUAL_ID: {
+			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			PmNavigatorGroup incominglinks = new PmNavigatorGroup(
+					Messages.NavigatorGroupName_Employee_2004_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry
+							.getType(ProjectManagerEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry
+							.getType(ProjectParticipantsEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(TaskExecutorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case ProjectManagerEditPart.VISUAL_ID: {
 			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			PmNavigatorGroup target = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_TaskProject_4021_target,
+					Messages.NavigatorGroupName_ProjectManager_4017_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			PmNavigatorGroup source = new PmNavigatorGroup(
-					Messages.NavigatorGroupName_TaskProject_4021_source,
+					Messages.NavigatorGroupName_ProjectManager_4017_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(EmployeeEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					PmVisualIDRegistry.getType(ProjectEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case TaskExecutorEditPart.VISUAL_ID: {
+			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			PmNavigatorGroup target = new PmNavigatorGroup(
+					Messages.NavigatorGroupName_TaskExecutor_4019_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			PmNavigatorGroup source = new PmNavigatorGroup(
+					Messages.NavigatorGroupName_TaskExecutor_4019_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(EmployeeEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -493,6 +416,83 @@ public class PmNavigatorContentProvider implements ICommonContentProvider {
 			}
 			if (!source.isEmpty()) {
 				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case TaskEditPart.VISUAL_ID: {
+			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			PmNavigatorGroup outgoinglinks = new PmNavigatorGroup(
+					Messages.NavigatorGroupName_Task_2006_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			PmNavigatorGroup incominglinks = new PmNavigatorGroup(
+					Messages.NavigatorGroupName_Task_2006_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(TaskExecutorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(TaskParentEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(TaskParentEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(TaskProjectEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case DocumentRootEditPart.VISUAL_ID: {
+			LinkedList<PmAbstractNavigatorItem> result = new LinkedList<PmAbstractNavigatorItem>();
+			Diagram sv = (Diagram) view;
+			PmNavigatorGroup links = new PmNavigatorGroup(
+					Messages.NavigatorGroupName_DocumentRoot_1000_links,
+					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(EmployeeEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(ProjectEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(TaskEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry
+							.getType(ProjectManagerEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry
+							.getType(ProjectParticipantsEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(TaskExecutorEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(TaskParentEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					PmVisualIDRegistry.getType(TaskProjectEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			if (!links.isEmpty()) {
+				result.add(links);
 			}
 			return result.toArray();
 		}
