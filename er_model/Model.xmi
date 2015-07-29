@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ERProfile="http:///schemas/ERProfile/_Y3EXUDXKEeWxNKCiNGcDzQ/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://schema.omg.org/spec/UML/2.2" xsi:schemaLocation="http:///schemas/ERProfile/_Y3EXUDXKEeWxNKCiNGcDzQ/26 ERProfile.profile.xmi#_Y3E-YDXKEeWxNKCiNGcDzQ http://schema.omg.org/spec/UML/2.2 http://www.eclipse.org/uml2/3.0.0/UML">
+  <uml:Model xmi:id="_wvW2oDUQEeWppPf8ExW5QQ" name="Model">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_wvW2ojUQEeWppPf8ExW5QQ">
+      <importedPackage xmi:type="uml:Model" href="http://schema.omg.org/spec/UML/2.2/uml.xml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zd_AEDUQEeWppPf8ExW5QQ" name="Задача">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5OYRYDUQEeWppPf8ExW5QQ" name="исполнитель" visibility="public" type="_1gHP4DUQEeWppPf8ExW5QQ" association="_5OBsEDUQEeWppPf8ExW5QQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5OaGkDUQEeWppPf8ExW5QQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5OZfgDUQEeWppPf8ExW5QQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8d7WkDUQEeWppPf8ExW5QQ" name="проект" visibility="public" type="_0cTpgDUQEeWppPf8ExW5QQ" association="_8d4TQDUQEeWppPf8ExW5QQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8d9y0DUQEeWppPf8ExW5QQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8d9LwDUQEeWppPf8ExW5QQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F7CKMDUREeWppPf8ExW5QQ" name="Название" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.2/uml.xml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F8jNIDUREeWppPf8ExW5QQ" name="Текст" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.2/uml.xml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F9-wgDUREeWppPf8ExW5QQ" name="План_время" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F_dXMDUREeWppPf8ExW5QQ" name="Факт_время" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YzRbgDUREeWppPf8ExW5QQ" name="подзадача" visibility="public" type="_zd_AEDUQEeWppPf8ExW5QQ" association="_YzO_QDUREeWppPf8ExW5QQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YzT3wDUREeWppPf8ExW5QQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YzTQsDUREeWppPf8ExW5QQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YzVs8DUREeWppPf8ExW5QQ" name="род_задача" visibility="public" type="_zd_AEDUQEeWppPf8ExW5QQ" association="_YzO_QDUREeWppPf8ExW5QQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YzW7EDUREeWppPf8ExW5QQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YzWUADUREeWppPf8ExW5QQ"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0cTpgDUQEeWppPf8ExW5QQ" name="Проект">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6seAADUQEeWppPf8ExW5QQ" name="руководитель" visibility="public" type="_1gHP4DUQEeWppPf8ExW5QQ" association="_6sWrQDUQEeWppPf8ExW5QQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6sgcQDUQEeWppPf8ExW5QQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6sf1MDUQEeWppPf8ExW5QQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7Hd58DUQEeWppPf8ExW5QQ" name="участники" visibility="public" type="_1gHP4DUQEeWppPf8ExW5QQ" association="_7HXMQDUQEeWppPf8ExW5QQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7HfvIDUQEeWppPf8ExW5QQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7HfIEDUQEeWppPf8ExW5QQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8d_oADUQEeWppPf8ExW5QQ" name="задачи" visibility="public" type="_zd_AEDUQEeWppPf8ExW5QQ" association="_8d4TQDUQEeWppPf8ExW5QQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8eCEQDUQEeWppPf8ExW5QQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8eBdMDUQEeWppPf8ExW5QQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PCon4DUREeWppPf8ExW5QQ" name="Название" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.2/uml.xml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PD-rsDUREeWppPf8ExW5QQ" name="Закрыт" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_1gHP4DUQEeWppPf8ExW5QQ" name="Сотрудник">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5OatoDUQEeWppPf8ExW5QQ" name="задачи" visibility="public" type="_zd_AEDUQEeWppPf8ExW5QQ" association="_5OBsEDUQEeWppPf8ExW5QQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5Ob7wDUQEeWppPf8ExW5QQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5ObUsDUQEeWppPf8ExW5QQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6sZHgDUQEeWppPf8ExW5QQ" name="проектыР" visibility="public" type="_0cTpgDUQEeWppPf8ExW5QQ" association="_6sWrQDUQEeWppPf8ExW5QQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6sbjwDUQEeWppPf8ExW5QQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6sa8sDUQEeWppPf8ExW5QQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7HZogDUQEeWppPf8ExW5QQ" name="проектыУ" visibility="public" type="_0cTpgDUQEeWppPf8ExW5QQ" association="_7HXMQDUQEeWppPf8ExW5QQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7HbdsTUQEeWppPf8ExW5QQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7HbdsDUQEeWppPf8ExW5QQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_95_E4DUQEeWppPf8ExW5QQ" name="ФИО" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.2/uml.xml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_963OoDUQEeWppPf8ExW5QQ" name="Дата_рождения" visibility="public" type="_CbHGsDUREeWppPf8ExW5QQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_5OBsEDUQEeWppPf8ExW5QQ" memberEnd="_5OYRYDUQEeWppPf8ExW5QQ _5OatoDUQEeWppPf8ExW5QQ"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6sWrQDUQEeWppPf8ExW5QQ" memberEnd="_6sZHgDUQEeWppPf8ExW5QQ _6seAADUQEeWppPf8ExW5QQ"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_7HXMQDUQEeWppPf8ExW5QQ" memberEnd="_7HZogDUQEeWppPf8ExW5QQ _7Hd58DUQEeWppPf8ExW5QQ"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_8d4TQDUQEeWppPf8ExW5QQ" memberEnd="_8d7WkDUQEeWppPf8ExW5QQ _8d_oADUQEeWppPf8ExW5QQ"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CbHGsDUREeWppPf8ExW5QQ" name="Date"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_YzO_QDUREeWppPf8ExW5QQ" memberEnd="_YzRbgDUREeWppPf8ExW5QQ _YzVs8DUREeWppPf8ExW5QQ"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wvW2ozUQEeWppPf8ExW5QQ">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wvW2pDUQEeWppPf8ExW5QQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://schema.omg.org/spec/UML/2.2/StandardProfileL2.xmi#_yzU58YinEdqtvbnfB2L_5w"/>
+        </eAnnotations>
+      </xmi:Extension>
+      <appliedProfile xmi:type="uml:Profile" href="http://schema.omg.org/spec/UML/2.2/StandardProfileL2.xmi#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wvW2pTUQEeWppPf8ExW5QQ">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wvW2pjUQEeWppPf8ExW5QQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="Default.profile.xmi#_fNwoAAqoEd6-N_NOT9vsCA"/>
+        </eAnnotations>
+      </xmi:Extension>
+      <appliedProfile xmi:type="uml:Profile" href="Default.profile.xmi#_a_S3wNWLEdiy4IqP8whjFA"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wvXdsDUQEeWppPf8ExW5QQ">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wvXdsTUQEeWppPf8ExW5QQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="Deployment.profile.xmi#_4OVBUD0TEeKt-L0gyEptgQ"/>
+        </eAnnotations>
+      </xmi:Extension>
+      <appliedProfile xmi:type="uml:Profile" href="Deployment.profile.xmi#_vjbuwOvHEdiDX5bji0iVSA"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HDyO0DW9EeWoGKfr0X9uBA">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HEPh0DW9EeWoGKfr0X9uBA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="ERProfile.profile.xmi#_Y3E-YDXKEeWxNKCiNGcDzQ"/>
+        </eAnnotations>
+      </xmi:Extension>
+      <appliedProfile xmi:type="uml:Profile" href="ERProfile.profile.xmi#_j2e8MDUPEeWppPf8ExW5QQ"/>
+    </profileApplication>
+  </uml:Model>
+  <ERProfile:Entity xmi:id="_It2j8DW9EeWoGKfr0X9uBA" base_Class="_zd_AEDUQEeWppPf8ExW5QQ"/>
+  <ERProfile:Entity xmi:id="_It4ZIDW9EeWoGKfr0X9uBA" base_Class="_1gHP4DUQEeWppPf8ExW5QQ"/>
+  <ERProfile:Entity xmi:id="_It4ZITW9EeWoGKfr0X9uBA" base_Class="_0cTpgDUQEeWppPf8ExW5QQ"/>
+  <ERProfile:Attribute xmi:id="_KeRYsDW9EeWoGKfr0X9uBA" base_Property="_95_E4DUQEeWppPf8ExW5QQ"/>
+  <ERProfile:Attribute xmi:id="_KeRYsTW9EeWoGKfr0X9uBA" base_Property="_963OoDUQEeWppPf8ExW5QQ"/>
+  <ERProfile:Attribute xmi:id="_LRqkgDW9EeWoGKfr0X9uBA" base_Property="_F7CKMDUREeWppPf8ExW5QQ"/>
+  <ERProfile:Attribute xmi:id="_LRrLkDW9EeWoGKfr0X9uBA" base_Property="_F8jNIDUREeWppPf8ExW5QQ"/>
+  <ERProfile:Attribute xmi:id="_LRryoDW9EeWoGKfr0X9uBA" base_Property="_F9-wgDUREeWppPf8ExW5QQ"/>
+  <ERProfile:Attribute xmi:id="_LRtAwDW9EeWoGKfr0X9uBA" base_Property="_F_dXMDUREeWppPf8ExW5QQ"/>
+  <ERProfile:Attribute xmi:id="_MF-9YDW9EeWoGKfr0X9uBA" base_Property="_PCon4DUREeWppPf8ExW5QQ"/>
+  <ERProfile:Attribute xmi:id="_MF-9YTW9EeWoGKfr0X9uBA" base_Property="_PD-rsDUREeWppPf8ExW5QQ"/>
+  <ERProfile:OneToManyRelation xmi:id="_N6zJ8DW9EeWoGKfr0X9uBA" base_Association="_8d4TQDUQEeWppPf8ExW5QQ"/>
+  <ERProfile:OneToManyRelation xmi:id="_N6zxADW9EeWoGKfr0X9uBA" base_Association="_6sWrQDUQEeWppPf8ExW5QQ"/>
+  <ERProfile:OneToManyRelation xmi:id="_N60YEDW9EeWoGKfr0X9uBA" base_Association="_5OBsEDUQEeWppPf8ExW5QQ"/>
+  <ERProfile:OneToManyRelation xmi:id="_N60_IDW9EeWoGKfr0X9uBA" base_Association="_YzO_QDUREeWppPf8ExW5QQ"/>
+  <ERProfile:ManyToManyRelation xmi:id="_Oyj4YDW9EeWoGKfr0X9uBA" base_Association="_7HXMQDUQEeWppPf8ExW5QQ"/>
+</xmi:XMI>
