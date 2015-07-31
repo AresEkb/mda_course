@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ProfileBase="http:///schemas/ProfileBase/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://schema.omg.org/spec/UML/2.2" xsi:schemaLocation="http:///schemas/ProfileBase/1 ProfileBase.profile.xmi#_IfFYQMmBEdqBcN1R6EvWUw http://schema.omg.org/spec/UML/2.2 http://www.eclipse.org/uml2/3.0.0/UML">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ProfileBase="http:///schemas/ProfileBase/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://schema.omg.org/spec/UML/2.2" xsi:schemaLocation="http:///schemas/ProfileBase/1 pathmap://UML2_MSL_PROFILES/ProfileBase.epx#_IfFYQMmBEdqBcN1R6EvWUw http://schema.omg.org/spec/UML/2.2 http://www.eclipse.org/uml2/3.0.0/UML">
   <uml:Profile xmi:id="_j2e8MDUPEeWppPf8ExW5QQ" name="ERProfile" metamodelReference="_j80NsDUPEeWppPf8ExW5QQ">
     <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j9imcDUPEeWppPf8ExW5QQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <contents xmi:type="ecore:EPackage" xmi:id="_Y3E-YDXKEeWxNKCiNGcDzQ" name="ERProfile" nsURI="http:///schemas/ERProfile/_Y3EXUDXKEeWxNKCiNGcDzQ/26" nsPrefix="ERProfile">
-          <eClassifiers xmi:type="ecore:EClass" xmi:id="_Y3E-YTXKEeWxNKCiNGcDzQ" name="Entity">
+        <contents xmi:type="ecore:EPackage" xmi:id="_0Wei0TbHEeWnj8L3sBW8Tw" name="ERProfile" nsURI="http:///schemas/ERProfile/_0Wei0DbHEeWnj8L3sBW8Tw/30" nsPrefix="ERProfile">
+          <eClassifiers xmi:type="ecore:EClass" xmi:id="_0Wei0jbHEeWnj8L3sBW8Tw" name="Entity">
             <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y3E-YjXKEeWxNKCiNGcDzQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_qv9VcDUPEeWppPf8ExW5QQ"/>
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y3E-YzXKEeWxNKCiNGcDzQ" source="http://www.eclipse.org/emf/2002/GenModel">
-                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Y3E-ZDXKEeWxNKCiNGcDzQ" key="documentation" value="ownedAttribute->forAll(&#xD;&#xA;  extension_Attribute->notEmpty() or&#xD;&#xA;  association->one(&#xD;&#xA;    extension_OneToManyRelation->notEmpty() or&#xD;&#xA;    extension_ManyToManyRelation->notEmpty()))"/>
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0Wei0zbHEeWnj8L3sBW8Tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_qv9VcDUPEeWppPf8ExW5QQ"/>
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0Wei1DbHEeWnj8L3sBW8Tw" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0Wei1TbHEeWnj8L3sBW8Tw" key="documentation" value="ownedAttribute->forAll(&#xD;&#xA;  extension_Attribute->notEmpty() or&#xD;&#xA;  association->one(&#xD;&#xA;    extension_OneToManyRelation->notEmpty() or&#xD;&#xA;    extension_ManyToManyRelation->notEmpty()))"/>
               </eAnnotations>
             </xmi:Extension>
-            <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_Y3E-ZTXKEeWxNKCiNGcDzQ" name="base_Class" ordered="false" lowerBound="1">
+            <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_0Wei1jbHEeWnj8L3sBW8Tw" name="base_Class" ordered="false" lowerBound="1">
               <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
             </eStructuralFeatures>
           </eClassifiers>
-          <eClassifiers xmi:type="ecore:EClass" xmi:id="_Y3E-ZzXKEeWxNKCiNGcDzQ" name="Attribute">
+          <eClassifiers xmi:type="ecore:EClass" xmi:id="_0Wei2DbHEeWnj8L3sBW8Tw" name="Attribute">
             <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y3E-aDXKEeWxNKCiNGcDzQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_s5spIDUPEeWppPf8ExW5QQ"/>
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y3E-aTXKEeWxNKCiNGcDzQ" source="http://www.eclipse.org/emf/2002/GenModel">
-                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Y3E-ajXKEeWxNKCiNGcDzQ" key="documentation" value="class.extension_Entity->notEmpty()&#xD;&#xA;class.getAppliedStereotype('ERProfile::Entity') &lt;> null&#xD;&#xA;type &lt;> null"/>
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0Wei2TbHEeWnj8L3sBW8Tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_s5spIDUPEeWppPf8ExW5QQ"/>
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0Wei2jbHEeWnj8L3sBW8Tw" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0Wei2zbHEeWnj8L3sBW8Tw" key="documentation" value="class.extension_Entity->notEmpty()&#xD;&#xA;class.getAppliedStereotype('ERProfile::Entity') &lt;> null&#xD;&#xA;type &lt;> null"/>
               </eAnnotations>
             </xmi:Extension>
-            <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_Y3E-azXKEeWxNKCiNGcDzQ" name="base_Property" ordered="false" lowerBound="1">
+            <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_0Wei3DbHEeWnj8L3sBW8Tw" name="base_Property" ordered="false" lowerBound="1">
               <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Property"/>
             </eStructuralFeatures>
-            <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_Y3E-bTXKEeWxNKCiNGcDzQ" name="minLength" ordered="false">
+            <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_0Wei3jbHEeWnj8L3sBW8Tw" name="minLength" ordered="false">
               <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
             </eStructuralFeatures>
-            <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_Y3E-bzXKEeWxNKCiNGcDzQ" name="maxLength" ordered="false">
+            <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_0Wei4DbHEeWnj8L3sBW8Tw" name="maxLength" ordered="false">
               <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
             </eStructuralFeatures>
-            <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_Y3E-cTXKEeWxNKCiNGcDzQ" name="pattern" ordered="false">
+            <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_0Wei4jbHEeWnj8L3sBW8Tw" name="pattern" ordered="false">
               <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
             </eStructuralFeatures>
           </eClassifiers>
-          <eClassifiers xmi:type="ecore:EClass" xmi:id="_Y3E-czXKEeWxNKCiNGcDzQ" name="OneToManyRelation">
+          <eClassifiers xmi:type="ecore:EClass" xmi:id="_0Wei5DbHEeWnj8L3sBW8Tw" name="OneToManyRelation">
             <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y3E-dDXKEeWxNKCiNGcDzQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_uaUuYDUPEeWppPf8ExW5QQ"/>
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y3E-dTXKEeWxNKCiNGcDzQ" source="http://www.eclipse.org/emf/2002/GenModel">
-                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Y3E-djXKEeWxNKCiNGcDzQ" key="documentation" value="memberEnd->size() = 2 and&#xD;&#xA;memberEnd->one(upper = 1) and&#xD;&#xA;memberEnd->one(upper = -1 or upper > 1)"/>
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0Wei5TbHEeWnj8L3sBW8Tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_uaUuYDUPEeWppPf8ExW5QQ"/>
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0Wei5jbHEeWnj8L3sBW8Tw" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0Wei5zbHEeWnj8L3sBW8Tw" key="documentation" value="memberEnd->size() = 2 and&#xD;&#xA;memberEnd->one(upper = 1) and&#xD;&#xA;memberEnd->one(upper = -1 or upper > 1)"/>
               </eAnnotations>
             </xmi:Extension>
-            <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_Y3E-dzXKEeWxNKCiNGcDzQ" name="base_Association" ordered="false" lowerBound="1">
+            <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_0Wei6DbHEeWnj8L3sBW8Tw" name="base_Association" ordered="false" lowerBound="1">
               <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Association"/>
             </eStructuralFeatures>
           </eClassifiers>
-          <eClassifiers xmi:type="ecore:EClass" xmi:id="_Y3E-eTXKEeWxNKCiNGcDzQ" name="ManyToManyRelation">
+          <eClassifiers xmi:type="ecore:EClass" xmi:id="_0Wei6jbHEeWnj8L3sBW8Tw" name="ManyToManyRelation">
             <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y3E-ejXKEeWxNKCiNGcDzQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_we9foDUPEeWppPf8ExW5QQ"/>
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0Wei6zbHEeWnj8L3sBW8Tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_we9foDUPEeWppPf8ExW5QQ"/>
             </xmi:Extension>
-            <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_Y3E-ezXKEeWxNKCiNGcDzQ" name="base_Association" ordered="false" lowerBound="1">
+            <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_0Wei7DbHEeWnj8L3sBW8Tw" name="base_Association" ordered="false" lowerBound="1">
               <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Association"/>
             </eStructuralFeatures>
           </eClassifiers>
